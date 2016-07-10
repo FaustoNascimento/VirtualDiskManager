@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.ComponentModel;
-using System.Data.Common;
 using System.Security.AccessControl;
 using VirtualDiskInterop;
 
@@ -9,15 +8,15 @@ namespace VirtualDiskManager.Core
 {
     public static class VirtualDiskCore
     {
-        public static VirtualDiskSafeHandle OpenVirtualDisk(VirtualStorageType storageType, string path, VirtualDiskAccessMasks mask, OpenVirtualDiskFlags flag, OpenVirtualDiskParameters parameters)
+        public static VirtualDiskSafeHandle OpenVirtualDisk(VirtualStorageType storageType, string filename, VirtualDiskAccessMasks mask, OpenVirtualDiskFlags flag, OpenVirtualDiskParameters parameters)
         {
-            if (!File.Exists(path))
+            if (!File.Exists(filename))
             {
                 throw new FileNotFoundException("File not found.");
             }
 
             var handle = new VirtualDiskSafeHandle();
-            var result = VirtualDiskApi.OpenVirtualDisk(storageType, path, mask, flag, parameters, handle);
+            var result = VirtualDiskApi.OpenVirtualDisk(storageType, filename, mask, flag, parameters, handle);
 
             if (result != 0)
             {
@@ -72,6 +71,28 @@ namespace VirtualDiskManager.Core
             {
                 throw new Win32Exception((int) result);
             }
+        }
+
+        public static VirtualDiskSafeHandle CreateVirtualDisk(VirtualStorageType storageType, string filename,
+            VirtualDiskAccessMasks mask, RawSecurityDescriptor securityDescriptor, CreateVirtualDiskFlags flags,
+            uint providerSpecificFlags, CreateVirtualDiskParameters parameters, Overlapped overlapped)
+        {
+            if (!Directory.GetParent(Path.GetFullPath(filename)).Exists ||
+                string.IsNullOrEmpty(Path.GetFileName(filename)))
+            {
+                throw new FileNotFoundException("Specified path does not exist or is invalid.");
+            }
+
+            var handle = new VirtualDiskSafeHandle();
+            var result = VirtualDiskApi.CreateVirtualDisk(storageType, filename, mask, securityDescriptor, flags,
+                providerSpecificFlags, parameters, overlapped, handle);
+
+            if (result != 0)
+            {
+                throw new Win32Exception((int)result);
+            }
+
+            return handle;
         }
     }
 }

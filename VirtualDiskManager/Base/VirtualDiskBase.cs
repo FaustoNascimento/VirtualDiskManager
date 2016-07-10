@@ -9,7 +9,7 @@ namespace VirtualDiskManager.Base
     {
         protected readonly VirtualDiskSafeHandle Handle;
 
-        internal VirtualDiskBase(string filename, VirtualDiskSafeHandle safeHandle)
+        protected VirtualDiskBase(string filename, VirtualDiskSafeHandle safeHandle)
         {
             Filename = filename;
             Handle = safeHandle;
@@ -41,20 +41,13 @@ namespace VirtualDiskManager.Base
             }
         }
 
-        #region Detach method
-        public virtual void Detach()
-        {
-            Detach(0);
-        }
-
-        public virtual void Detach(uint providerSpecificFlags)
+        public virtual void Detach(uint providerSpecificFlags = 0)
         {
             VirtualDiskCore.DetachVirtualDisk(Handle, DetachVirtualDiskFlags.None, providerSpecificFlags);
         }
-        #endregion
 
         #region Properties
-        private GetVirtualDiskInfo GetVirtualDiskInfo(GetVirtualDiskInfoVersions infoVersion)
+        protected GetVirtualDiskInfo GetVirtualDiskInfo(GetVirtualDiskInfoVersions infoVersion)
         {
             if (Handle == null || Handle.IsClosed)
             {

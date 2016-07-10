@@ -1,0 +1,9 @@
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManagerScrapyard\bin\Debug\VirtualDiskManagerScrapyard.exe.config
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManagerScrapyard\bin\Debug\VirtualDiskManagerScrapyard.exe
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManagerScrapyard\bin\Debug\VirtualDiskManagerScrapyard.pdb
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManagerScrapyard\bin\Debug\VirtualDiskManager.dll
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManagerScrapyard\bin\Debug\VirtualDiskInterop.dll
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManagerScrapyard\bin\Debug\VirtualDiskManager.pdb
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManagerScrapyard\obj\Debug\VirtualDiskManagerScrapyard.csprojResolveAssemblyReference.cache
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManagerScrapyard\obj\Debug\VirtualDiskManagerScrapyard.exe
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManagerScrapyard\obj\Debug\VirtualDiskManagerScrapyard.pdb

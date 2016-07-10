@@ -1,0 +1,6 @@
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManager\bin\x86\Debug\VirtualDiskManager.dll
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManager\bin\x86\Debug\VirtualDiskManager.pdb
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManager\bin\x86\Debug\VirtualDiskInterop.dll
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManager\obj\x86\Debug\VirtualDiskManager.csprojResolveAssemblyReference.cache
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManager\obj\x86\Debug\VirtualDiskManager.dll
+C:\Users\FN\Documents\Visual Studio 2015\Projects\VirtualDiskManager\VirtualDiskManager\obj\x86\Debug\VirtualDiskManager.pdb

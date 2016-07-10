@@ -4,7 +4,7 @@ using VirtualDiskInterop;
 namespace VirtualDiskManager.Enums.Iso9660
 {
     [Flags]
-    public enum Iso9660VirtualDiskAccessMask
+    public enum IsoVirtualDiskAccessMasks
     {
         AttachReadOnly = VirtualDiskAccessMasks.AttachReadOnly,
 
